@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+.logo-menu{
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+  
+}
+.img-logo-menu{
+height: 60px;
+
+}
