@@ -7,7 +7,7 @@ import { Fab } from '@material-ui/core';
 import NewProductForm from './NewProductForm';
 import NewProductItem from './NewProductItem';
 import ProductList from './ProductList';
-
+import Container from '@material-ui/core/Container';
 
 
 class App extends React.Component {
@@ -102,13 +102,15 @@ class App extends React.Component {
     return (
       <div className="App" >
         <Header />
-        <AddButton
-          section={this.state.section}
-          goToNewProduct={this.goToNewProduct}
-          goToList={this.goToList}
-        />
-        {this.currentSection()}
-
+        <Container maxWidth="lg">
+          <AddButton
+            product={this.state.productToEdit}
+            section={this.state.section}
+            goToNewProduct={this.goToNewProduct}
+            goToList={this.goToList}
+          />
+          {this.currentSection()}
+        </Container>
       </div>
     );
   }
